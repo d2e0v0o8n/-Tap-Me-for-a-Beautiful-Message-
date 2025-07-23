@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Devon Says: You’re Loved 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(-45deg, red, orange, yellow, green, blue, indigo, violet, pink, cyan, gold, coral, hotpink);
+      background-size: 500% 500%;
+      animation: rainbowBG 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+    }
+
+    @keyframes rainbowBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .box {
+      background: white;
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0 0 40px rgba(255, 0, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: float 3s ease-in-out infinite;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    @keyframes float {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #e91e63;
+      font-weight: bold;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" onclick="showMessage()">
+    💌 Tap Me for a Beautiful Message 💌
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const messages = [
+      "You are more powerful than your pain.\nThe way you carry yourself is inspiring.",
+      "Your smile has magic in it.\nEven the clouds envy your light.",
+      "You matter in ways you may never see.\nBut trust me, someone’s day is better because of you.",
+      "The world is lucky to have your energy.\nYour heart is a rare kind of beautiful.",
+      "There’s something so comforting about you.\nLike home, even to those who don’t know you well.",
+      "You don’t need to change to be enough.\nYou already are — just as you are.",
+      "When you walk into a room,\nit gets warmer, brighter, and better.",
+      "Your kindness is loud, even in silence.\nIt ripples far beyond what you know.",
+      "You’re doing better than you think.\nRest if you need, but never forget your strength.",
+      "You are seen.\nYou are valued. You are loved. Always.",
+      "The way you survive silently is heroic.\nYou are a warrior in soft skin.",
+      "Even your quiet days are meaningful.\nThe universe smiles every time you do.",
+      "You light up hearts effortlessly.\nEven stars feel jealous sometimes.",
+      "You’re the type of person who makes others believe in love again.\nAnd that’s beautiful.",
+      "You don’t need a crown to be royal.\nYour presence alone is noble.",
+      "You're not behind. You're not late.\nYou're growing at the perfect pace.",
+      "Your dreams are still valid.\nIt’s okay to start again today.",
+      "Someone is thinking of you right now.\nSmiling just because you exist.",
+      "Every tear you’ve cried has watered strength.\nYou are blooming even when it hurts.",
+      "You bring peace just by being real.\nThat’s a rare kind of magic.",
+    ];
+
+    function showMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[randomIndex];
+    }
+  </script>
+</body>
+</html>
